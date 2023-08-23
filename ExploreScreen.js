@@ -227,22 +227,12 @@ const ExploreScreen = () => {
               resizeMode="cover"
             />
             <View style={styles.textContent}>
-              <Text numberOfLines={1} style={styles.cardtitle}>{marker.title}</Text>
-              <StarRating ratings={marker.rating} reviews={marker.reviews} />
-              <Text numberOfLines={1} style={styles.cardDescription}>{marker.description}</Text>
-              <View style={styles.button}>
-                <TouchableOpacity
-                  onPress={() => {}}
-                  style={[styles.signIn, {
-                    borderColor: '#FF6347',
-                    borderWidth: 1
-                  }]}
-                >
-                  <Text style={[styles.textSign, {
-                    color: '#FF6347'
-                  }]}>Order Now</Text>
-                </TouchableOpacity>
-              </View>
+              <Text numberOfLines={1} style={styles.cardtitle}>
+                {marker.title}
+                </Text>
+              <Text numberOfLines={1} style={styles.cardDescription}>
+                {marker.description}
+                </Text>
             </View>
           </View>
         ))}
@@ -305,7 +295,7 @@ const styles = StyleSheet.create({
     paddingRight: width - CARD_WIDTH,
   },
   card: {
-    // padding: 10,
+    padding: 10,
     elevation: 2,
     backgroundColor: "#FFF",
     borderTopLeftRadius: 5,
@@ -326,12 +316,12 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   textContent: {
-    flex: 2,
-    padding: 10,
+    flex: 1,
+    // padding: 10,
   },
   cardtitle: {
     fontSize: 12,
-    // marginTop: 5,
+    marginTop: 5,
     fontWeight: "bold",
   },
   cardDescription: {
