@@ -17,8 +17,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 
-import { markers, mapDarkStyle, mapStandardStyle } from './model/mapData';
-import StarRating from './components/StarRating';
+import { markers } from './model/mapData';
+// import StarRating from './components/StarRating';
 
 // import { useTheme } from '@react-navigation/native';
 
@@ -108,8 +108,12 @@ const ExploreScreen = () => {
       outputRange: [1, 1.5, 1],
       extrapolate: "clamp"
     });
-
-    return { scale };
+    const opacity = mapAnimation.interpolate({
+      inputRange,
+      outputRange: [0.35, 1, 0.35],
+      extrapolate: "clamp",
+    });
+    return { scale, opacity };
   });
 
   const onMarkerPress = (mapEventData) => {
@@ -264,7 +268,7 @@ const styles = StyleSheet.create({
     marginTop: Platform.OS === 'ios' ? 40 : 30, 
     flexDirection:"row",
     backgroundColor: '#fff',
-    width: '20%',
+    width: '30%',
     alignSelf:'center',
     borderRadius: 5,
     padding: 10,
@@ -350,12 +354,13 @@ const styles = StyleSheet.create({
   marker: {
     width: 8,
     height: 8,
+    borderRadius: 4,
     backgroundColor: "red",
   },
   ring: {
     width: 24,
     height: 24,
-    borderRadius: 25,
+    borderRadius: 12,
     backgroundColor: "rgba(130,4,150, 0.3)",
     position: "absolute",
     borderWidth: 1,

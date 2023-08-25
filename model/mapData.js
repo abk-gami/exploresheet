@@ -20,8 +20,8 @@ export const markers = [
     },
     {
       coordinate: {
-        latitude: 10.608173,
-        longitude:   7.439115,
+        latitude: 10.608165678198482,
+        longitude:   7.439113428898723,
       },
       title: 'AFIT Gate',
       description: 'Make sure you hold your I.D card',
@@ -87,13 +87,4 @@ export const markers = [
 ];
 
 
-  export const mapStandardStyle = [
-    {
-      "elementType": "labels.icon",
-      "stylers": [
-        {
-          "visibility": "off"
-        }
-      ]
-    },
-  ];
+
