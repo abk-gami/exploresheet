@@ -261,10 +261,10 @@ const styles = StyleSheet.create({
   },
   searchBox: {
     position:'absolute', 
-    marginTop: Platform.OS === 'ios' ? 40 : 30, 
+    marginTop: Platform.OS === 'ios' ? 40 : 20, 
     flexDirection:"row",
     backgroundColor: '#fff',
-    width: '20%',
+    width: '90%',
     alignSelf:'center',
     borderRadius: 5,
     padding: 10,
@@ -344,8 +344,8 @@ const styles = StyleSheet.create({
   markerWrap: {
     alignItems: "center",
     justifyContent: "center",
-    width:50,
-    height:50,
+    // width:50,
+    // height:50,
   },
   marker: {
     width: 8,
